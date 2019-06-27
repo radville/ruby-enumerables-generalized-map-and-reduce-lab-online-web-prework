@@ -18,11 +18,7 @@ def reduce(array, starting_point = false)
   end
     while i < array.length do
       sum = yield(sum, array[i])
-      puts sum
       i += 1
     end
     return sum
 end
-
-source_array = [ false, nil, nil, nil, true]
-reduce(source_array){|memo, n| memo || n}
